@@ -5,8 +5,8 @@ sudo apt update
 
 read  -n 1 -p "Setup Github SSH key: https://www.geeksforgeeks.org/using-github-with-ssh-secure-shell/" mainmenuinput
 
-sudo apt install build-essential curl git cmake htop unzip xclip ripgrep
-sudo apt install fish tmux neovim yt-dlp baobab
+sudo apt install build-essential curl git cmake htop unzip ripgrep
+sudo apt install fish tmux yt-dlp baobab
 sudo apt install golang python3
 
 git config --global user.email "adegbijiabigail@gmail.com"
@@ -53,10 +53,9 @@ cargo build --release
 sudo mv target/release/muse /usr/bin/muse
 cd
 
-echo "Download some music, write .muse.conf"
-echo "Setup neovim -- :PackerSync"
 echo "Install chrome"
-echo "Install obsidian"
+echo "Install Vscode"
+echo "Download some music, write .muse.conf"
 
 sudo apt install '*video-intel*'
 
