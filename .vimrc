@@ -1,4 +1,4 @@
-
+set hlsearch
 set nowrap
 set title
 set number
