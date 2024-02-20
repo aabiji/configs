@@ -9,8 +9,7 @@ sudo add-apt-repository ppa:tomtomtom/yt-dlp
 sudo apt update
 
 sudo apt install curl git cmake p7zip-full ripgrep vim yt-dlp code
-sudo apt install build-essential golang python3 nodejs mesa-utils
-sudo apt install code
+sudo apt install build-essential golang python3 python3-pip nodejs mesa-utils cloc
 
 cd Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
