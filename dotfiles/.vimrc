@@ -15,7 +15,7 @@ set splitright
 set noswapfile
 set nobackup
 set tabpagemax=100
-
+set viminfofile=NONE
 nnoremap <S-l> <S-a>
 nnoremap <C-l> :tabnext<CR>
 nnoremap <C-h> :tabprev<CR>

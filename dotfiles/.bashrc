@@ -111,8 +111,13 @@ if ! shopt -oq posix; then
 fi
 
 # git prompt
+source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\e[1;33m$(__git_ps1 " (%s)")\e[0;37m\$ '
+GREEN="\[\033[01;32m\]"
+BLUE="\[\033[01;34m\]"
+YELLOW="\[\033[01;33m\]"
+RESET="\[\033[00m\]"
+export PS1="${debian_chroot:+($debian_chroot)}$GREEN\u@\h$RESET:$BLUE\w$RESET\$(__git_ps1 ' ($YELLOW%s$RESET)')\$ "
 
 # custom configs
 alias cp="cp -r"

@@ -1,0 +1,55 @@
+{
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": -0.4,
+    "window.menuBarVisibility": "toggle",
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false,
+        "**/Thumbs.db": false
+    },
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.codeLens": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.folding": false,
+    "editor.minimap.maxColumn": 80,
+    "breadcrumbs.enabled": false,
+    "editor.lightbulb.enabled": "off",
+    "keyboard.dispatch": "keyCode",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.inlayHints.enabled": "off",
+    "editor.scrollBeyondLastLine": false,
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDelete": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "workbench.iconTheme": "vs-seti",
+    "editor.minimap.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "html.autoClosingTags": false,
+    "typescript.autoClosingTags": false,
+    "html.autoCreateQuotes": false,
+    "application.shellEnvironmentResolutionTimeout": 100,
+    "terminal.integrated.defaultProfile.linux": "bash (2)",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "*.mutable": {
+                "underline": false
+            }
+        }
+    },
+    "workbench.sideBar.location": "right",
+    "editor.wordWrap": "bounded"
+}
