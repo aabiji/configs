@@ -8,8 +8,8 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo add-apt-repository ppa:tomtomtom/yt-dlp
 sudo apt update
 
-sudo apt install curl git cmake p7zip-full ripgrep vim yt-dlp code gnome-clocks stow gnome-tweaks
-sudo apt install build-essential golang python3 python3-pip nodejs mesa-utils cloc tmux
+sudo apt install curl git cmake p7zip-full ripgrep vim yt-dlp code stow gnome-tweaks
+sudo apt install build-essential python3 python3-pip nodejs mesa-utils cloc tmux
 
 cd Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -17,6 +17,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 rm * && cd
 
 sudo snap install obsidian --classic
+sudo snap install go --classic
 sudo snap remove --purge firefox 
 
 curl -fsSL https://bun.sh/install | bash
