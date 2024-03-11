@@ -22,8 +22,6 @@ sudo snap remove --purge firefox
 curl -fsSL https://bun.sh/install | bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-pip install numpy torch
-
 # Setup projects
 cd && mkdir dev && cd dev
 git clone git@github.com:aabiji/muse.git
@@ -54,7 +52,7 @@ cargo build --release
 sudo mv target/release/muse /usr/bin/muse
 
 # Load configs
-cd ~/Downloads/configs
+cd ~/dev/configs
 stow dotfiles -t $HOME
 
 # Full update

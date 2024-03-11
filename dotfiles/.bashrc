@@ -126,8 +126,11 @@ alias ls="ls -a --color"
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export PATH=$HOME/go/bin:$HOME/.cargo/bin:$HOME/.bun/bin:$PATH
+alias update="~/dev/journal/update.py"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 . "$HOME/.cargo/env"
+
+force_color_prompt=yes
