@@ -10,15 +10,14 @@ export EDITOR="vim"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-export PATH=/home/aabiji/Downloads/dart-sdk/bin:$PATH
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
 
-alias journal="cd ~/dev/journal && ./update.py && cd"
-alias ls="ls -a --color"
 alias rm="rm -rf"
 alias cp="cp -r"
-alias python="python3"
+alias ls="ls -a --color"
 alias activate="source .venv/bin/activate"
+alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo snap refresh"
+alias push="git add -p && git commit && git push"
+alias journal="cd ~/dev/journal && ./update.py && cd"
 
 # Rust cargo
 . "$HOME/.cargo/env"

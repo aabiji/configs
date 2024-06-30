@@ -1,4 +1,4 @@
-sudo apt install tmux gnome-tweaks vim git cloc python3-pip build-essential curl zsh
+sudo apt install tmux gnome-tweaks vim git cloc python3-pip build-essential curl zsh yt-dlp
 
 # Setup package manager for vscode
 sudo apt-get install wget gpg
@@ -29,7 +29,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 echo "Install google-chrome"
 echo "Install JetBrains Mono and Monaspace font"
-echo "Get wallpaper: https://wallhaven.cc/w/d6z2pj"
 
 sudo snap install vlc
 sudo snap install obsidian --classic
@@ -41,3 +40,6 @@ gh repo list aabiji --limit 4000 | while read -r repo _; do
 done
 
 sudo apt update && sudo apt upgrade
+sudo apt autoremove
+
+python3 update-configs.py
