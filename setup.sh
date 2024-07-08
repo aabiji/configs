@@ -29,6 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 echo "Install google-chrome"
 echo "Install JetBrains Mono and Monaspace font"
+echo "Install Night Theme Switcher gnome extension"
 
 sudo snap install vlc
 sudo snap install obsidian --classic
