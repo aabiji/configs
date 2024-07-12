@@ -1,9 +1,10 @@
 import os
 
-files = os.listdir(os.getcwd())
-for file in files:
-    if ".sh" in file or ".py" in file:
+path = f"{os.getcwd()}/dotfiles"
+entries = os.listdir(path)
+for entry in entries:
+    if ".sh" in entry or ".py" in entry:
         continue
-    dst = f"/home/aabiji/{file}"
-    src = f"/home/aabiji/dev/configs/{file}"
+    dst = f"/home/aabiji/{entry}"
+    src = f"{path}/{entry}"
     os.symlink(src, dst)
