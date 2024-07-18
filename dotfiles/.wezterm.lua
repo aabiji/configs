@@ -18,15 +18,35 @@ config.keys = {
 	},
 
 	{
+		key = "]",
+		mods = "CTRL|ALT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+
+	{
 		key = "[",
 		mods = "CTRL|ALT",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
-
 	{
-		key = "]",
+		key = "h",
 		mods = "CTRL|ALT",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "l",
+		mods = "CTRL|ALT",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "k",
+		mods = "CTRL|ALT",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "j",
+		mods = "CTRL|ALT",
+		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 }
 
