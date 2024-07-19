@@ -3,7 +3,6 @@ vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = false
 vim.opt.number = false
-
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 
@@ -28,7 +27,9 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 10
 vim.opt.cmdheight = 0
-vim.wo.fillchars = "eob: "
+vim.opt.fillchars = { eob = " " }
+vim.cmd("set nofixeol")
+vim.cmd("set nofixendofline")
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -53,9 +54,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
-
 	{ "lewis6991/gitsigns.nvim" },
-
 	{
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
@@ -73,7 +72,6 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>fb", builtin.current_buffer_fuzzy_find)
 		end,
 	},
-
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -124,7 +122,6 @@ require("lazy").setup({
 			})
 		end,
 	},
-
 	{ -- Autoformat
 		"stevearc/conform.nvim",
 		lazy = false,
@@ -152,7 +149,6 @@ require("lazy").setup({
 			},
 		},
 	},
-
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -198,7 +194,6 @@ require("lazy").setup({
 			})
 		end,
 	},
-
 	{
 		"sainnhe/gruvbox-material",
 		priority = 1000,
@@ -209,21 +204,18 @@ require("lazy").setup({
 			vim.cmd.colorscheme("gruvbox-material")
 		end,
 	},
-
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
-
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
 			require("lualine").setup({})
 		end,
 	},
-
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",

@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font({
 	family = "Monaspace Neon",
+	weight = "Medium",
 	harfbuzz_features = { "calt=1", "liga=1", "ss01=1", "ss02=1", "cv30=1", "cv60=1" },
 })
 config.font_size = 10
