@@ -4,7 +4,6 @@ vim.g.maplocalleader = " "
 vim.g.have_nerd_font = false
 vim.opt.number = false
 vim.opt.mouse = "a"
-vim.opt.showmode = false
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.breakindent = true
@@ -14,6 +13,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.signcolumn = "no"
+vim.opt.fillchars = { eob = " " }
 
 vim.opt.updatetime = 250
 
@@ -27,7 +27,12 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 10
 vim.opt.cmdheight = 0
-vim.opt.fillchars = { eob = " " }
+
+vim.opt.breakindent = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+
+-- Don't add end of file newline
 vim.cmd("set nofixeol")
 vim.cmd("set nofixendofline")
 
@@ -35,12 +40,15 @@ vim.cmd("set nofixendofline")
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", "<M-m>", ":vsplit<CR>")
 vim.keymap.set("n", "<M-n>", ":split<CR>")
+vim.keymap.set("n", "<M-m>", ":vsplit<CR>")
 vim.keymap.set("n", "<M-l>", "<C-w>l")
 vim.keymap.set("n", "<M-k>", "<C-w>k")
 vim.keymap.set("n", "<M-j>", "<C-w>j")
 vim.keymap.set("n", "<M-h>", "<C-w>h")
+
+vim.keymap.set("n", "<S-Up>", ":m-2<CR>")
+vim.keymap.set("n", "<S-Down>", ":m+<CR>")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -213,7 +221,18 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
-			require("lualine").setup({})
+			require("lualine").setup({
+				options = { section_separators = "", component_separators = "", icons_enabled = false },
+				globalstatus = false,
+				sections = {
+					lualine_a = { "mode" },
+					lualine_b = { "branch", "diff", "diagnostics" },
+					lualine_c = { "filename" },
+					lualine_x = {},
+					lualine_y = {},
+					lualine_z = { "location" },
+				},
+			})
 		end,
 	},
 	{
