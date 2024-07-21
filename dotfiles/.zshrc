@@ -6,12 +6,11 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
-export EDITOR="nvim"
+export EDITOR="vim"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
-alias v="nvim"
 alias rm="rm -rf"
 alias cp="cp -r"
 alias ls="ls -a --color"
